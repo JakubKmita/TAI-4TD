@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja</title>
+    <style>
+        /* 1. Wyśrodkowanie na całej wysokości strony */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Środek w poziomie */
+            align-items: center;     /* Środek w pionie */
+            min-height: 100vh;       /* Wysokość całego okna */
+            background-color: #f0f2f5; /* Delikatne tło */
+            font-family: Arial, sans-serif;
+        }
+
+        /* 2. Stylizacja ramki formularza */
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;    /* Zaokrąglone rogi */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Delikatny cień */
+            border: 1px solid #ccc;
+            width: 300px;           /* Stała szerokość ramki */
+        }
+
+        /* 3. Estetyczne ułożenie pól */
+        input {
+            width: 100%;            /* Pola na całą szerokość ramki */
+            padding: 10px;
+            margin: 10px 0 20px 0;  /* Odstępy między polami */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box; /* Zapobiega wystawaniu pól poza ramkę */
+        }
+
+        /* 4. Styl przycisku */
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="rej_skrypt.php" method="POST">
+        <label>Login:</label>
+        <input type="text" name="login">
+        
+        <label>Hasło:</label>
+        <input type="password" name="password" autocomplete="off">
+        
+        <input type="submit" name="Send" value="Zarejestruj się">
+    </form>
+
+</body>
+</html>
